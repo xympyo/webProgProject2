@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converse | Login</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Style.css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Pixel Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jQuery CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      body {
+        background-image: url(./assets/galaxyBg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+      }
+      .loginafter {
+        transform: translateY(40rem);
+      }
+      .login-before {
+        animation: loginBefore 2s forwards;
+      }
+      .login-after {
+        animation: loginAfter 2s forwards;
+      }
+
+      @keyframes loginBefore {
+        0% {
+          transform: translateY(0rem);
+        }
+        100% {
+          transform: translateY(-80rem);
+        }
+      }
+
+      @keyframes loginAfter {
+        0% {
+          transform: translateY(80rem);
+        }
+        100% {
+          transform: translateY(-50rem);
+        }
+      }
+
+      @media (max-width: 2561px) {
+        @keyframes loginAfter {
+          0% {
+            transform: translateY(80rem);
+          }
+          100% {
+            transform: translateY(-30rem);
+          }
+        }
+      }
+      /* 2xl */
+      @media (max-width: 1536px) {
+        .loginafter {
+          transform: translateY(80rem);
+        }
+      }
+
+      /* xl */
+      @media (max-width: 1280px) {
+        @keyframes loginAfter {
+          0% {
+            transform: translateY(80rem);
+          }
+          100% {
+            transform: translateY(-30rem);
+          }
+        }
+        /* login form */
+        .loginshoe-1 {
+          position: absolute;
+          left: 0rem;
+          top: 1rem;
+          z-index: -1;
+        }
+        .loginshoe-2 {
+          position: absolute;
+          right: 4rem;
+          top: 6rem;
+        }
+        .loginshoe-3 {
+          position: absolute;
+          left: 6rem;
+          top: 12rem;
+        }
+        .loginshoe-4 {
+          position: absolute;
+          right: 6rem;
+          top: 18rem;
+        }
+        .loginshoe-5 {
+          position: absolute;
+          left: 4rem;
+          bottom: 8rem;
+        }
+        .loginshoe-6 {
+          position: absolute;
+          right: 4rem;
+          bottom: 4rem;
+        }
+        .loginshoe-7 {
+          position: absolute;
+          left: 16rem;
+          bottom: 1rem;
+        }
+        .login-animate {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* lg */
+      @media (max-width: 1025px) {
+        .loginbutton {
+          font-size: 2rem;
+        }
+        @keyframes loginAfter {
+          0% {
+            transform: translateY(80rem);
+          }
+          100% {
+            transform: translateY(-20rem);
+          }
+        }
+      }
+
+      @media (max-width: 769px) {
+        .loginbutton {
+          font-size: 1.5rem;
+        }
+        .loginshoes {
+          width: 8rem;
+        }
+      }
+
+      /* sm */
+      @media (max-width: 629px) {
+      }
+
+      /* xs */
+      @media (max-width: 475px) {
+        @keyframes loginAfter {
+          0% {
+            transform: translateY(80rem);
+          }
+          100% {
+            transform: translateY(-20rem);
+          }
+        }
+        /* login form */
+        .loginshoe-1 {
+          position: absolute;
+          left: 0rem;
+          top: 1rem;
+          z-index: -1;
+        }
+        .loginshoe-2 {
+          position: absolute;
+          right: 4rem;
+          top: 6rem;
+        }
+        .loginshoe-3 {
+          position: absolute;
+          left: 3rem;
+          top: 12rem;
+        }
+        .loginshoe-4 {
+          position: absolute;
+          right: 2rem;
+          top: 18rem;
+        }
+        .loginshoe-5 {
+          position: absolute;
+          left: 2rem;
+          bottom: 8rem;
+        }
+        .loginshoe-6 {
+          position: absolute;
+          right: 4rem;
+          bottom: 4rem;
+        }
+        .loginshoe-7 {
+          position: absolute;
+          left: 6rem;
+          bottom: 1rem;
+        }
+        .loginshoes {
+          width: 5rem;
+        }
+        .loginbutton {
+          font-size: 0.7rem;
+        }
+        .login-animate {
+          font-size: 0.6rem;
+        }
+        @keyframes loginAnimation {
+          0% {
+            letter-spacing: 0px;
+          }
+          10% {
+            letter-spacing: 0.2rem;
+          }
+          20% {
+            letter-spacing: -0.3rem;
+          }
+          30% {
+            letter-spacing: 0.3rem;
+          }
+          40% {
+            letter-spacing: 0.5rem;
+          }
+          50% {
+            letter-spacing: 0.2rem;
+          }
+          60% {
+            letter-spacing: -0.2rem;
+          }
+          70% {
+            letter-spacing: 0.3rem;
+          }
+          80% {
+            letter-spacing: 0.4rem;
+          }
+          90% {
+            letter-spacing: 0.1rem;
+          }
+          100% {
+            letter-spacing: 0rem;
+          }
+        }
+      }
+      @media (max-width: 376px) {
+        @keyframes loginAfter {
+          0% {
+            transform: translateY(80rem);
+          }
+          100% {
+            transform: translateY(-20rem);
+          }
+        }
+        /* login form */
+        .loginshoe-1 {
+          position: absolute;
+          left: 0rem;
+          top: 1rem;
+          z-index: -1;
+        }
+        .loginshoe-2 {
+          position: absolute;
+          right: 4rem;
+          top: 6rem;
+        }
+        .loginshoe-3 {
+          position: absolute;
+          left: 3rem;
+          top: 12rem;
+        }
+        .loginshoe-4 {
+          position: absolute;
+          right: 2rem;
+          top: 18rem;
+        }
+        .loginshoe-5 {
+          position: absolute;
+          left: 2rem;
+          bottom: 8rem;
+        }
+        .loginshoe-6 {
+          position: absolute;
+          right: 4rem;
+          bottom: 4rem;
+        }
+        .loginshoe-7 {
+          position: absolute;
+          left: 6rem;
+          bottom: 1rem;
+        }
+        .loginshoes {
+          width: 5rem;
+        }
+        .loginbutton {
+          font-size: 0.7rem;
+        }
+        .login-animate {
+          font-size: 0.6rem;
+        }
+        @keyframes loginAnimation {
+          0% {
+            letter-spacing: 0px;
+          }
+          10% {
+            letter-spacing: 0.2rem;
+          }
+          20% {
+            letter-spacing: -0.3rem;
+          }
+          30% {
+            letter-spacing: 0.3rem;
+          }
+          40% {
+            letter-spacing: 0.4rem;
+          }
+          50% {
+            letter-spacing: 0.2rem;
+          }
+          60% {
+            letter-spacing: -0.2rem;
+          }
+          70% {
+            letter-spacing: 0.3rem;
+          }
+          80% {
+            letter-spacing: 0.3rem;
+          }
+          90% {
+            letter-spacing: 0.1rem;
+          }
+          100% {
+            letter-spacing: 0rem;
+          }
+        }
+      }
+      @media (max-width: 336px) {
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div
+      class="container-fluid d-flex justify-row align-items-center bg-yellow"
+    >
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="./assets/logo.svg"
+              alt=""
+              class="img-fluid text-light"
+              style="
+                filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg)
+                  brightness(118%) contrast(118%);
+              "
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link nav-bar text-light" href="girlSection.html"
+                  >GIRLS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-bar text-light" href="boySection.html"
+                  >BOYS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-bar text-light" href="willywonka.html"
+                  >SPECIAL EDITION</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="ms-auto d-flex flex-row-reverse align-items-center">
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            class="bi bi-search"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg>
+        </a>
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            class="bi bi-cart"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+            />
+          </svg>
+        </a>
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ffffff"
+            class="bi bi-person-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+            />
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Login Before -->
+    <div class="container" id="loginBefore">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="d-flex flex-column">
+            <img src="./assets/ConverseLogo.png" class="img-fluid" alt="" />
+            <button class="loginbutton rounded-4 p-2" onclick="loginreveal()">
+              enter your data
+            </button>
+          </div>
+        </div>
+        <div class="col-4"></div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <h3 class="text-light text-center fw-lighter">
+            Enter your data and we will send you the latest information about
+            promos and interesting types of Converse shoes!!
+          </h3>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+
+    <!-- Login After -->
+    <div class="container loginafter" id="loginAfter">
+      <div class="d-flex flex-column justify-content-center">
+        <div class="row">
+          <section class="mt-3">
+            <h1 class="text-center text-light login-animate">
+              Be a part of Converse Family
+            </h1>
+          </section>
+        </div>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <div class="mt-4 d-flex flex-column">
+              <label for="email" class="text-center text-light"
+                >your email</label
+              >
+              <input
+                class="rounded-4 p-2"
+                type="text"
+                id="email"
+                name="email"
+              />
+            </div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <div class="mt-4 d-flex flex-column">
+              <label for="phone" class="text-center text-light"
+                >your phone number</label
+              >
+              <input
+                class="rounded-4 p-2"
+                type="text"
+                id="phone"
+                name="phone"
+              />
+            </div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <div class="mt-4 d-flex flex-column">
+              <label for="age" class="text-center text-light">your age</label>
+              <input class="rounded-4 p-2" type="text" id="age" name="age" />
+            </div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <div class="mt-4 d-flex flex-column">
+              <label for="country" class="text-center text-light"
+                >your country</label
+              >
+              <input
+                class="rounded-4 p-2"
+                type="text"
+                id="country"
+                name="country"
+              />
+            </div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+      </div>
+    </div>
+    <img
+      src="./assets/loginShoe1.png"
+      class="loginshoes blur-lg loginshoe-1"
+      alt=""
+    />
+    <img
+      src="./assets/loginShoe2.png"
+      class="loginshoes blur-hv loginshoe-2"
+      alt=""
+    />
+    <img
+      src="./assets/loginShoe3.png"
+      class="loginshoes blur-hv loginshoe-3"
+      alt=""
+    />
+    <img
+      src="./assets/loginShoe4.png"
+      class="loginshoes blur-lg loginshoe-4"
+      alt=""
+    />
+    <img
+      src="./assets/loginShoe5.png"
+      class="loginshoes blur-lg loginshoe-5"
+      alt=""
+    />
+    <img
+      src="./assets/loginShoe6.png"
+      class="loginshoes blur-hv loginshoe-6"
+      alt=""
+    />
+    <img
+      src="./assets/loginShoe7.png"
+      class="loginshoes blur-lg loginshoe-7"
+      alt=""
+    />
+    <script>
+      function loginreveal() {
+        var loginBefore = document.getElementById("loginBefore");
+        var loginAfter = document.getElementById("loginAfter");
+        console.log(loginBefore.style.transform);
+        loginBefore.classList.add("login-before");
+        loginAfter.classList.add("login-after");
+      }
+    </script>
+  </body>
+</html>

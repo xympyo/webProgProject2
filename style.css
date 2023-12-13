@@ -1,0 +1,306 @@
+/* Font Input */
+*,
+html,
+body {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+}
+
+.nav-bar {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.girls-section-bg {
+  background: #ffe1e1;
+  height: 16.5rem;
+}
+
+.boys-section-bg {
+  background: #a9a9a9;
+  height: 16.5rem;
+}
+
+.shoes {
+  width: 16rem;
+  animation: shoesFloating 5s infinite both;
+}
+@keyframes shoesFloating {
+  0% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+.hero-text {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.footstep {
+  position: absolute;
+  bottom: 115.875rem;
+  left: 69.6rem;
+  z-index: 9998;
+  height: 28rem;
+  transform: rotate(60deg);
+}
+
+.footstep-bottom {
+  position: absolute;
+  bottom: 103.6rem;
+  left: 70rem;
+  z-index: 9997;
+  height: 28rem;
+  transform: rotate(10deg);
+}
+
+.all-star {
+  width: 26rem;
+  position: absolute;
+  bottom: 110.2rem;
+  left: 67.6rem;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.christmast-sect {
+  background-color: #061800;
+  height: 50rem;
+  cursor: pointer;
+}
+
+.wonkaa-sect {
+  background-color: #45001c;
+  height: 50rem;
+  cursor: pointer;
+}
+
+.girls-sect {
+  background-color: #3f2d42;
+  height: 50rem;
+  cursor: pointer;
+}
+
+.boys-sect {
+  background-color: #332929;
+  height: 50rem;
+  cursor: pointer;
+}
+
+.secondhero-text {
+  font-family: "VT323", monospace;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 2.5rem;
+}
+
+.secondhero-img {
+  width: 14rem;
+}
+
+.box-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wonka-star {
+  width: 26rem;
+}
+
+.girlsect-shoes {
+  cursor: pointer;
+}
+.girlsect-shoes-anim {
+  width: 100%;
+}
+
+@keyframes girlsectRightToLeft {
+  0% {
+    transform: translateX(60rem);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes girlsectLeftToRight {
+  0% {
+    transform: translateX(-60rem);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+@keyframes girlsectInputRight {
+  0% {
+    transform: translateX(30rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+@keyframes girlsectInputLeft {
+  0% {
+    transform: translateX(-30rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+@keyframes girlsectOutput {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.wonka-text {
+  color: #ffff;
+  font-weight: 700;
+}
+
+/* login form */
+.loginshoe-1 {
+  position: absolute;
+  left: 0rem;
+  top: 1rem;
+  z-index: -1;
+}
+.loginshoe-2 {
+  position: absolute;
+  right: 4rem;
+  top: 6rem;
+}
+.loginshoe-3 {
+  position: absolute;
+  left: 12rem;
+  top: 12rem;
+}
+.loginshoe-4 {
+  position: absolute;
+  right: 12rem;
+  top: 18rem;
+}
+.loginshoe-5 {
+  position: absolute;
+  left: 4rem;
+  bottom: 8rem;
+}
+.loginshoe-6 {
+  position: absolute;
+  right: 4rem;
+  bottom: 4rem;
+}
+.loginshoe-7 {
+  position: absolute;
+  left: 16rem;
+  bottom: 1rem;
+}
+.blur-lg {
+  filter: blur(0.2rem);
+  transition: ease-in-out 0.2s;
+  &:hover {
+    filter: blur(0);
+    transform: scale(1.2);
+    transform: translateX(-2rem);
+  }
+}
+.blur-hv {
+  filter: blur(0.3rem);
+  transition: ease-in-out 0.2s;
+  &:hover {
+    filter: blur(0);
+    transform: scale(1.2);
+    transform: translateX(1rem);
+  }
+}
+
+.loginbutton {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.login-animate {
+  animation: loginAnimation both infinite 8s;
+}
+
+@keyframes loginAnimation {
+  0% {
+    letter-spacing: 0px;
+  }
+  10% {
+    letter-spacing: 0.2rem;
+  }
+  20% {
+    letter-spacing: -0.3rem;
+  }
+  30% {
+    letter-spacing: 0.3rem;
+  }
+  40% {
+    letter-spacing: 0.5rem;
+  }
+  50% {
+    letter-spacing: 0.2rem;
+  }
+  60% {
+    letter-spacing: -0.2rem;
+  }
+  70% {
+    letter-spacing: 0.3rem;
+  }
+  80% {
+    letter-spacing: 0.6rem;
+  }
+  90% {
+    letter-spacing: 0.1rem;
+  }
+  100% {
+    letter-spacing: 0rem;
+  }
+}
+
+.loginbutton {
+  transition: ease-in-out 0.5s;
+  &:hover {
+    box-shadow: 0px 20px 20px -10px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0px 20px 20px -10px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 20px 20px -10px rgba(255, 255, 255, 0.75);
+  }
+}

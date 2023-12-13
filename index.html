@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converse</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Style.css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Pixel Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jQuery CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      /* 2xl */
+      @media (max-width: 1536px) {
+        .all-star {
+          position: absolute;
+          left: 32rem;
+          top: 13.85rem;
+        }
+        .footstep {
+          position: absolute;
+          left: 35rem;
+          top: 5.2rem;
+        }
+        .footstep-bottom {
+          position: absolute;
+          left: 35rem;
+          top: 17.5rem;
+        }
+      }
+
+      /* xl */
+      @media (max-width: 1280px) {
+        .all-star {
+          position: absolute;
+          width: 18rem;
+          left: 29.4rem;
+          top: 16rem;
+        }
+        .footstep {
+          position: absolute;
+          left: 29.4rem;
+          top: 6rem;
+          rotate: -10deg;
+        }
+        .footstep-bottom {
+          position: absolute;
+          left: 29.4rem;
+          top: 16.8rem;
+        }
+      }
+
+      /* lg */
+      @media (max-width: 1025px) {
+        .hero-text {
+          font-size: 1.2rem;
+        }
+        .all-star {
+          position: absolute;
+          width: 16rem;
+          left: 24.15rem;
+          top: 16.85rem;
+        }
+        .footstep {
+          position: absolute;
+          height: 24rem;
+          left: 24rem;
+          top: 5.8rem;
+        }
+        .footstep-bottom {
+          position: absolute;
+          height: 24rem;
+          left: 24rem;
+          top: 20.2rem;
+        }
+        .christmast-sect {
+          background-color: #061800;
+          height: 35rem;
+          cursor: pointer;
+        }
+
+        .wonkaa-sect {
+          background-color: #45001c;
+          height: 35rem;
+          cursor: pointer;
+        }
+
+        .girls-sect {
+          background-color: #3f2d42;
+          height: 35rem;
+          cursor: pointer;
+        }
+
+        .boys-sect {
+          background-color: #332929;
+          height: 35rem;
+          cursor: pointer;
+        }
+      }
+
+      /* md */
+      @media (max-width: 769px) {
+        .girls-section-bg {
+          background: #ffe1e1;
+          height: 12rem;
+        }
+
+        .boys-section-bg {
+          background: #a9a9a9;
+          height: 12rem;
+        }
+        .shoes {
+          width: 8rem;
+        }
+        .hero-text {
+          font-size: 0.8rem;
+        }
+        .all-star {
+          position: absolute;
+          width: 12rem;
+          left: 17.9rem;
+          top: 14.55rem;
+        }
+        .footstep {
+          position: absolute;
+          height: 14rem;
+          left: 19.9rem;
+          top: 6.4rem;
+        }
+        .footstep-bottom {
+          position: absolute;
+          height: 14rem;
+          left: 19.9rem;
+          top: 20rem;
+          rotate: 6deg;
+        }
+        .christmast-sect {
+          background-color: #061800;
+          height: 24rem;
+          cursor: pointer;
+        }
+
+        .wonkaa-sect {
+          background-color: #45001c;
+          height: 24rem;
+          cursor: pointer;
+        }
+
+        .girls-sect {
+          background-color: #3f2d42;
+          height: 24rem;
+          cursor: pointer;
+        }
+
+        .boys-sect {
+          background-color: #332929;
+          height: 24rem;
+          cursor: pointer;
+        }
+      }
+
+      /* sm */
+      @media (max-width: 629px) {
+        .girls-section-bg {
+          background: #ffe1e1;
+          height: 12rem;
+        }
+
+        .boys-section-bg {
+          background: #a9a9a9;
+          height: 12rem;
+        }
+        .shoes {
+          width: 8rem;
+        }
+        .hero-text {
+          font-size: 0.8rem;
+        }
+        .all-star {
+          position: absolute;
+          width: 7rem;
+          left: 205rem;
+          top: 16.55rem;
+        }
+        .footstep {
+          position: absolute;
+          height: 14rem;
+          left: 7rem;
+          top: 6.4rem;
+          rotate: -12deg;
+        }
+        .footstep-bottom {
+          position: absolute;
+          height: 14rem;
+          left: 7rem;
+          top: 20rem;
+          rotate: 6deg;
+        }
+        .christmast-sect {
+          background-color: #061800;
+          height: 24rem;
+          cursor: pointer;
+        }
+
+        .wonkaa-sect {
+          background-color: #45001c;
+          height: 24rem;
+          cursor: pointer;
+        }
+
+        .girls-sect {
+          background-color: #3f2d42;
+          height: 24rem;
+          cursor: pointer;
+        }
+
+        .boys-sect {
+          background-color: #332929;
+          height: 24rem;
+          cursor: pointer;
+        }
+      }
+
+      /* xs */
+      @media (max-width: 475px) {
+        .girls-section-bg {
+          background: #ffe1e1;
+          height: 9rem;
+        }
+
+        .boys-section-bg {
+          background: #a9a9a9;
+          height: 9rem;
+        }
+        .shoes {
+          width: 6rem;
+        }
+        .hero-text {
+          font-size: 0.6rem;
+        }
+        .all-star {
+          position: absolute;
+          width: 8rem;
+          left: 9.35rem;
+          top: 13.1rem;
+        }
+        .footstep {
+          position: absolute;
+          height: 10rem;
+          left: 10.35rem;
+          top: 7rem;
+          rotate: -12deg;
+        }
+        .footstep-bottom {
+          position: absolute;
+          height: 10rem;
+          left: 10rem;
+          top: 17.6rem;
+          rotate: 6deg;
+        }
+        .secondhero-text {
+          font-size: 2.6rem;
+        }
+        .christmast-sect {
+          background-color: #061800;
+          height: 20rem;
+          cursor: pointer;
+        }
+
+        .wonkaa-sect {
+          background-color: #45001c;
+          height: 20rem;
+          cursor: pointer;
+        }
+
+        .girls-sect {
+          background-color: #3f2d42;
+          height: 20rem;
+          cursor: pointer;
+        }
+
+        .boys-sect {
+          background-color: #332929;
+          height: 20rem;
+          cursor: pointer;
+        }
+      }
+      @media (max-width: 376px) {
+        .girls-section-bg {
+          background: #ffe1e1;
+          height: 9rem;
+        }
+
+        .boys-section-bg {
+          background: #a9a9a9;
+          height: 9rem;
+        }
+        .shoes {
+          width: 6rem;
+        }
+        .hero-text {
+          font-size: 0.6rem;
+        }
+        .all-star {
+          position: absolute;
+          width: 8rem;
+          left: 7.85rem;
+          top: 13.1rem;
+        }
+        .footstep {
+          position: absolute;
+          height: 10rem;
+          left: 8.35rem;
+          top: 7rem;
+          rotate: -12deg;
+        }
+        .footstep-bottom {
+          position: absolute;
+          height: 10rem;
+          left: 9rem;
+          top: 17.6rem;
+          rotate: 6deg;
+        }
+        .secondhero-text {
+          font-size: 2.6rem;
+        }
+        .christmast-sect {
+          background-color: #061800;
+          height: 20rem;
+          cursor: pointer;
+        }
+
+        .wonkaa-sect {
+          background-color: #45001c;
+          height: 20rem;
+          cursor: pointer;
+        }
+
+        .girls-sect {
+          background-color: #3f2d42;
+          height: 20rem;
+          cursor: pointer;
+        }
+
+        .boys-sect {
+          background-color: #332929;
+          height: 20rem;
+          cursor: pointer;
+        }
+      }
+      @media (max-width: 336px) {
+        .girls-section-bg {
+          background: #ffe1e1;
+          height: 7.5rem;
+        }
+
+        .boys-section-bg {
+          background: #a9a9a9;
+          height: 7.5rem;
+        }
+        .shoes {
+          width: 6rem;
+        }
+        .hero-text {
+          font-size: 0.5rem;
+        }
+        .all-star {
+          position: absolute;
+          width: 7rem;
+          left: 6.5rem;
+          top: 16.1rem;
+        }
+        .footstep {
+          position: absolute;
+          height: 8rem;
+          left: 7.9rem;
+          top: 9.2rem;
+          rotate: -12deg;
+        }
+        .footstep-bottom {
+          position: absolute;
+          height: 8rem;
+          left: 6.9rem;
+          top: 18.8rem;
+          rotate: 6deg;
+        }
+        .secondhero-text {
+          font-size: 2.6rem;
+        }
+        .christmast-sect {
+          background-color: #061800;
+          height: 18rem;
+          cursor: pointer;
+        }
+
+        .wonkaa-sect {
+          background-color: #45001c;
+          height: 18rem;
+          cursor: pointer;
+        }
+
+        .girls-sect {
+          background-color: #3f2d42;
+          height: 18rem;
+          cursor: pointer;
+        }
+
+        .boys-sect {
+          background-color: #332929;
+          height: 18rem;
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar Section -->
+      <div class="container-fluid d-flex justify-row align-items-center">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"
+              ><img src="./assets/logo.svg" alt="" class="img-fluid"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link nav-bar" href="girlSection.html">GIRLS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-bar" href="boySection.html">BOYS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-bar" href="willywonka.html"
+                    >SPECIAL EDITION</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav class="ms-auto d-flex flex-row-reverse align-items-center">
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#212427"
+              class="bi bi-search"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </a>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#212427"
+              class="bi bi-cart"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+              />
+            </svg>
+          </a>
+          <a href="login.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#212427"
+              class="bi bi-person-fill"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+              />
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <div
+              class="girls-section-bg d-flex justify-content-center align-items-center"
+            >
+              <img
+                class="shoes"
+                src="./assets/girlsSection.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <h1 class="text-center hero-text">GIRL'S SECTION</h1>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-5">
+            <div
+              class="boys-section-bg d-flex justify-content-center align-items-center"
+            >
+              <img class="shoes" src="./assets/boysSection.png" alt="" />
+            </div>
+            <h1 class="text-center hero-text">BOY'S SECTION</h1>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-5">
+            <div
+              class="girls-section-bg d-flex justify-content-center align-items-center"
+            >
+              <img class="shoes" src="./assets/girlsSection1.png" alt="" />
+            </div>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-5">
+            <div
+              class="boys-section-bg d-flex justify-content-center align-items-center"
+            >
+              <img class="shoes" src="./assets/boysSection2.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="./assets/allStarLogo.png"
+            class="img-fluid all-star"
+            alt=""
+          />
+          <img
+            src="./assets/footStepHero.png"
+            class="img-fluid footstep"
+            alt=""
+          />
+          <img
+            src="./assets/footStepHero.png"
+            class="img-fluid footstep-bottom"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Ronaldo Willy Wonka Sect -->
+      <div class="container d-flex flex-row mt-5">
+        <div class="row col-12 g-2 d-flex justify-content-center">
+          <div class="col-3" id="christmasContainer" onclick="christmas()">
+            <div class="box-section christmast-sect">
+              <h1 class="secondhero-text text-center">CHR<br />IST<br />MAS</h1>
+              <img
+                src="./assets/christmasSect.png"
+                id="christmasSect"
+                class="secondhero-img img-fluid"
+                alt="Section"
+              />
+            </div>
+          </div>
+          <div class="col-3" id="wonkaContainer" onclick="wonka()">
+            <div class="box-section wonkaa-sect">
+              <h1 class="secondhero-text text-center">WON<br />KAA</h1>
+              <img
+                src="./assets/wonkaHatSect.png"
+                id="wonkaSect"
+                class="secondhero-img img-fluid mt-5"
+                alt="Section"
+              />
+            </div>
+          </div>
+          <div class="col-3" id="girlContainer" onclick="girl()">
+            <div class="box-section girls-sect">
+              <h1 class="secondhero-text text-center">GI<br />RL</h1>
+              <img
+                src="./assets/pinkConverseSect.png"
+                id="girlSect"
+                class="secondhero-img img-fluid mt-5"
+                alt="Section"
+              />
+            </div>
+          </div>
+          <div class="col-3" id="boyContainer" onclick="boy()">
+            <div class="box-section boys-sect">
+              <h1 class="secondhero-text text-center">BO<br />YS</h1>
+              <img
+                src="./assets/blackConverseSect.png"
+                id="boySect"
+                class="secondhero-img img-fluid mt-5"
+                alt="Section"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function christmas() {
+        console.log("what");
+        var christmas = document.getElementById("christmasSect");
+        var wonka = document.getElementById("wonkaSect");
+        var girl = document.getElementById("girlsSect");
+        var boy = document.getElementById("boySect");
+        var christmasContainer = document.getElementById("christmasContainer");
+        var wonkaContainer = document.getElementById("wonkaContainer");
+        var girlContainer = document.getElementById("girlContainer");
+        var boyContainer = document.getElementById("boyContainer");
+
+        if (christmasContainer.classList == "col-3") {
+          christmasContainer.classList.remove("col-3");
+          christmasContainer.classList.add("col-6");
+          wonkaContainer.classList.remove("col-3");
+          wonkaContainer.classList.add("col-2");
+          girlContainer.classList.remove("col-3");
+          girlContainer.classList.add("col-2");
+          boyContainer.classList.remove("col-3");
+          boyContainer.classList.add("col-2");
+          wonkaContainer.style.cursor = "none";
+        } else {
+          christmasContainer.classList.remove("col-6");
+          christmasContainer.classList.add("col-3");
+          wonkaContainer.classList.remove("col-2");
+          wonkaContainer.classList.add("col-3");
+          girlContainer.classList.remove("col-2");
+          girlContainer.classList.add("col-3");
+          boyContainer.classList.remove("col-2");
+          boyContainer.classList.add("col-3");
+        }
+      }
+      function wonka() {
+        console.log("what");
+        var christmas = document.getElementById("christmasSect");
+        var wonka = document.getElementById("wonkaSect");
+        var girl = document.getElementById("girlsSect");
+        var boy = document.getElementById("boySect");
+        var christmasContainer = document.getElementById("christmasContainer");
+        var wonkaContainer = document.getElementById("wonkaContainer");
+        var girlContainer = document.getElementById("girlContainer");
+        var boyContainer = document.getElementById("boyContainer");
+        christmasContainer.style.cursor = "none";
+
+        if (wonkaContainer.classList == "col-3") {
+          christmasContainer.classList.remove("col-3");
+          christmasContainer.classList.add("col-2");
+          wonkaContainer.classList.remove("col-3");
+          wonkaContainer.classList.add("col-6");
+          girlContainer.classList.remove("col-3");
+          girlContainer.classList.add("col-2");
+          boyContainer.classList.remove("col-3");
+          boyContainer.classList.add("col-2");
+        } else {
+          christmasContainer.classList.remove("col-2");
+          christmasContainer.classList.add("col-3");
+          wonkaContainer.classList.remove("col-6");
+          wonkaContainer.classList.add("col-3");
+          girlContainer.classList.remove("col-2");
+          girlContainer.classList.add("col-3");
+          boyContainer.classList.remove("col-2");
+          boyContainer.classList.add("col-3");
+        }
+      }
+      function christmas() {
+        console.log("what");
+        var christmas = document.getElementById("christmasSect");
+        var wonka = document.getElementById("wonkaSect");
+        var girl = document.getElementById("girlsSect");
+        var boy = document.getElementById("boySect");
+        var christmasContainer = document.getElementById("christmasContainer");
+        var wonkaContainer = document.getElementById("wonkaContainer");
+        var girlContainer = document.getElementById("girlContainer");
+        var boyContainer = document.getElementById("boyContainer");
+
+        if (christmasContainer.classList == "col-3") {
+          christmasContainer.classList.remove("col-3");
+          christmasContainer.classList.add("col-6");
+          wonkaContainer.classList.remove("col-3");
+          wonkaContainer.classList.add("col-2");
+          girlContainer.classList.remove("col-3");
+          girlContainer.classList.add("col-2");
+          boyContainer.classList.remove("col-3");
+          boyContainer.classList.add("col-2");
+        } else {
+          christmasContainer.classList.remove("col-6");
+          christmasContainer.classList.add("col-3");
+          wonkaContainer.classList.remove("col-2");
+          wonkaContainer.classList.add("col-3");
+          girlContainer.classList.remove("col-2");
+          girlContainer.classList.add("col-3");
+          boyContainer.classList.remove("col-2");
+          boyContainer.classList.add("col-3");
+        }
+      }
+      function christmas() {
+        console.log("what");
+        var christmas = document.getElementById("christmasSect");
+        var wonka = document.getElementById("wonkaSect");
+        var girl = document.getElementById("girlsSect");
+        var boy = document.getElementById("boySect");
+        var christmasContainer = document.getElementById("christmasContainer");
+        var wonkaContainer = document.getElementById("wonkaContainer");
+        var girlContainer = document.getElementById("girlContainer");
+        var boyContainer = document.getElementById("boyContainer");
+
+        if (christmasContainer.classList == "col-3") {
+          christmasContainer.classList.remove("col-3");
+          christmasContainer.classList.add("col-6");
+          wonkaContainer.classList.remove("col-3");
+          wonkaContainer.classList.add("col-2");
+          girlContainer.classList.remove("col-3");
+          girlContainer.classList.add("col-2");
+          boyContainer.classList.remove("col-3");
+          boyContainer.classList.add("col-2");
+        } else {
+          christmasContainer.classList.remove("col-6");
+          christmasContainer.classList.add("col-3");
+          wonkaContainer.classList.remove("col-2");
+          wonkaContainer.classList.add("col-3");
+          girlContainer.classList.remove("col-2");
+          girlContainer.classList.add("col-3");
+          boyContainer.classList.remove("col-2");
+          boyContainer.classList.add("col-3");
+        }
+      }
+    </script>
+  </body>
+</html>
