@@ -370,7 +370,7 @@ body {
 .reveal {
   animation: normalReveal 2s linear both;
   animation-timeline: view(block);
-  animation-range: contain -70% contain 100%;
+  animation-range: contain -200% contain 100%;
 }
 @keyframes normalReveal {
   from {
