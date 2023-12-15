@@ -76,31 +76,39 @@ body {
   bottom: 110.2rem;
   left: 67.6rem;
   z-index: 9999;
-  cursor: pointer;
 }
 
 .christmast-sect {
   background-color: #061800;
   height: 50rem;
-  cursor: pointer;
+}
+
+.smaller {
+  font-family: "VT323", monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.5rem;
+  margin-bottom: -1rem;
 }
 
 .wonkaa-sect {
   background-color: #45001c;
   height: 50rem;
-  cursor: pointer;
 }
 
 .girls-sect {
   background-color: #3f2d42;
   height: 50rem;
-  cursor: pointer;
 }
 
 .boys-sect {
   background-color: #332929;
   height: 50rem;
-  cursor: pointer;
+}
+
+.secondary-text {
+  font-family: "VT323", monospace;
 }
 
 .secondhero-text {
@@ -109,10 +117,29 @@ body {
   font-weight: 400;
   color: #ffffff;
   line-height: 2.5rem;
+  animation: floating both infinite 10s reverse;
 }
 
 .secondhero-img {
   width: 14rem;
+  animation: floating both infinite 10s;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0rem);
+  }
+  25% {
+    transform: translateY(0.4rem);
+  }
+  50% {
+    transform: translateY(-0.4rem);
+  }
+  75% {
+    transform: translateY(0.4rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
 }
 
 .box-section {
@@ -196,6 +223,9 @@ body {
 }
 
 /* login form */
+.loginshoes {
+  animation: floating 7s infinite both;
+}
 .loginshoe-1 {
   position: absolute;
   left: 0rem;
@@ -293,6 +323,63 @@ body {
   }
   100% {
     letter-spacing: 0rem;
+  }
+}
+
+.section-animation-left {
+  animation: reveal-left linear both;
+  animation-timeline: view(block);
+  animation-range: cover 0% contain 60%;
+}
+.section-animation-right {
+  animation: reveal-right linear both;
+  animation-timeline: view(block);
+  animation-range: cover 0% contain 60%;
+}
+.section-animation-endl {
+  animation: reveal-left linear both;
+  animation-timeline: view(block);
+  animation-range: cover 0% entry 60%;
+}
+.section-animation-endr {
+  animation: reveal-right linear both;
+  animation-timeline: view(block);
+  animation-range: cover 0% entry 60%;
+}
+@keyframes reveal-right {
+  from {
+    opacity: 0.3;
+    transform: translateX(30rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes reveal-left {
+  from {
+    opacity: 0.3;
+    transform: translateX(-30rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+.reveal {
+  animation: normalReveal 2s linear both;
+  animation-timeline: view(block);
+  animation-range: contain -70% contain 100%;
+}
+@keyframes normalReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
   }
 }
 

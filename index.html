@@ -582,11 +582,13 @@
       </div>
 
       <!-- Ronaldo Willy Wonka Sect -->
-      <div class="container d-flex flex-row mt-5">
+      <div class="container d-flex flex-row mt-5 reveal">
         <div class="row col-12 g-2 d-flex justify-content-center">
           <div class="col-3" id="christmasContainer" onclick="christmas()">
-            <div class="box-section christmast-sect">
-              <h1 class="secondhero-text text-center">CHR<br />IST<br />MAS</h1>
+            <div class="box-section christmast-sect" id="christmasActive">
+              <h1 class="secondhero-text text-center" id="christmasText">
+                CHR<br />IST<br />MAS
+              </h1>
               <img
                 src="./assets/christmasSect.png"
                 id="christmasSect"
@@ -597,7 +599,9 @@
           </div>
           <div class="col-3" id="wonkaContainer" onclick="wonka()">
             <div class="box-section wonkaa-sect">
-              <h1 class="secondhero-text text-center">WON<br />KAA</h1>
+              <h1 class="secondhero-text text-center" id="wonkaText">
+                WON<br />KAA
+              </h1>
               <img
                 src="./assets/wonkaHatSect.png"
                 id="wonkaSect"
@@ -608,7 +612,9 @@
           </div>
           <div class="col-3" id="girlContainer" onclick="girl()">
             <div class="box-section girls-sect">
-              <h1 class="secondhero-text text-center">GI<br />RL</h1>
+              <h1 class="secondhero-text text-center" id="girlText">
+                GI<br />RL
+              </h1>
               <img
                 src="./assets/pinkConverseSect.png"
                 id="girlSect"
@@ -619,7 +625,9 @@
           </div>
           <div class="col-3" id="boyContainer" onclick="boy()">
             <div class="box-section boys-sect">
-              <h1 class="secondhero-text text-center">BO<br />YS</h1>
+              <h1 class="secondhero-text text-center" id="boyText">
+                BO<br />YS
+              </h1>
               <img
                 src="./assets/blackConverseSect.png"
                 id="boySect"
@@ -632,17 +640,18 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
       function christmas() {
-        console.log("what");
-        var christmas = document.getElementById("christmasSect");
-        var wonka = document.getElementById("wonkaSect");
-        var girl = document.getElementById("girlsSect");
-        var boy = document.getElementById("boySect");
         var christmasContainer = document.getElementById("christmasContainer");
         var wonkaContainer = document.getElementById("wonkaContainer");
         var girlContainer = document.getElementById("girlContainer");
         var boyContainer = document.getElementById("boyContainer");
+        var christmasText = document.getElementById("christmasText");
+        var christmasActive = document.getElementById("christmasActive");
+        var christmasHidden = document.getElementById("christmasHidden");
+        var christmasHiddenContainer = document.getElementById(
+          "christmasHiddenContainer"
+        );
 
         if (christmasContainer.classList == "col-3") {
           christmasContainer.classList.remove("col-3");
@@ -653,7 +662,9 @@
           girlContainer.classList.add("col-2");
           boyContainer.classList.remove("col-3");
           boyContainer.classList.add("col-2");
-          wonkaContainer.style.cursor = "none";
+          christmasHidden.style.display = "block";
+          christmasActive.style.display = "none";
+          christmasHiddenContainer.classList.remove("hidden");
         } else {
           christmasContainer.classList.remove("col-6");
           christmasContainer.classList.add("col-3");
@@ -663,6 +674,8 @@
           girlContainer.classList.add("col-3");
           boyContainer.classList.remove("col-2");
           boyContainer.classList.add("col-3");
+          christmasActive.style.display = "block";
+          christmasHidden.style.display = "none";
         }
       }
       function wonka() {
@@ -676,6 +689,7 @@
         var girlContainer = document.getElementById("girlContainer");
         var boyContainer = document.getElementById("boyContainer");
         christmasContainer.style.cursor = "none";
+        var wonkaText = document.getElementById("wonkaText");
 
         if (wonkaContainer.classList == "col-3") {
           christmasContainer.classList.remove("col-3");
@@ -686,6 +700,8 @@
           girlContainer.classList.add("col-2");
           boyContainer.classList.remove("col-3");
           boyContainer.classList.add("col-2");
+          wonkaText.classList.remove("secondhero-text");
+          wonkaText.classList.add("smaller");
         } else {
           christmasContainer.classList.remove("col-2");
           christmasContainer.classList.add("col-3");
@@ -695,9 +711,11 @@
           girlContainer.classList.add("col-3");
           boyContainer.classList.remove("col-2");
           boyContainer.classList.add("col-3");
+          wonkaText.classList.add("secondhero-text");
+          wonkaText.classList.remomve("smaller");
         }
       }
-      function christmas() {
+      function girl() {
         console.log("what");
         var christmas = document.getElementById("christmasSect");
         var wonka = document.getElementById("wonkaSect");
@@ -707,28 +725,33 @@
         var wonkaContainer = document.getElementById("wonkaContainer");
         var girlContainer = document.getElementById("girlContainer");
         var boyContainer = document.getElementById("boyContainer");
+        var girlText = document.getElementById("girlText");
 
         if (christmasContainer.classList == "col-3") {
           christmasContainer.classList.remove("col-3");
-          christmasContainer.classList.add("col-6");
+          christmasContainer.classList.add("col-2");
           wonkaContainer.classList.remove("col-3");
           wonkaContainer.classList.add("col-2");
           girlContainer.classList.remove("col-3");
-          girlContainer.classList.add("col-2");
+          girlContainer.classList.add("col-6");
           boyContainer.classList.remove("col-3");
           boyContainer.classList.add("col-2");
+          girlText.classList.remove("secondhero-text");
+          girlText.classList.add("smaller");
         } else {
-          christmasContainer.classList.remove("col-6");
+          christmasContainer.classList.remove("col-2");
           christmasContainer.classList.add("col-3");
           wonkaContainer.classList.remove("col-2");
           wonkaContainer.classList.add("col-3");
-          girlContainer.classList.remove("col-2");
+          girlContainer.classList.remove("col-6");
           girlContainer.classList.add("col-3");
           boyContainer.classList.remove("col-2");
           boyContainer.classList.add("col-3");
+          girlText.classList.add("secondhero-text");
+          girlText.classList.remove("smaller");
         }
       }
-      function christmas() {
+      function boy() {
         console.log("what");
         var christmas = document.getElementById("christmasSect");
         var wonka = document.getElementById("wonkaSect");
@@ -738,27 +761,32 @@
         var wonkaContainer = document.getElementById("wonkaContainer");
         var girlContainer = document.getElementById("girlContainer");
         var boyContainer = document.getElementById("boyContainer");
+        var boyText = document.getElementById("boyText");
 
         if (christmasContainer.classList == "col-3") {
           christmasContainer.classList.remove("col-3");
-          christmasContainer.classList.add("col-6");
+          christmasContainer.classList.add("col-2");
           wonkaContainer.classList.remove("col-3");
           wonkaContainer.classList.add("col-2");
           girlContainer.classList.remove("col-3");
           girlContainer.classList.add("col-2");
           boyContainer.classList.remove("col-3");
-          boyContainer.classList.add("col-2");
+          boyContainer.classList.add("col-6");
+          boyText.classList.remove("secondhero-text");
+          boyText.classList.add("smaller");
         } else {
-          christmasContainer.classList.remove("col-6");
+          christmasContainer.classList.remove("col-2");
           christmasContainer.classList.add("col-3");
           wonkaContainer.classList.remove("col-2");
           wonkaContainer.classList.add("col-3");
           girlContainer.classList.remove("col-2");
           girlContainer.classList.add("col-3");
-          boyContainer.classList.remove("col-2");
+          boyContainer.classList.remove("col-6");
           boyContainer.classList.add("col-3");
+          boyText.classList.add("secondhero-text");
+          boyText.classList.remove("smaller");
         }
       }
-    </script>
+    </script> -->
   </body>
 </html>
